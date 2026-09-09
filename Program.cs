@@ -9,18 +9,13 @@ Console.WriteLine(cachorro);
 
 
 
-Produto produto1 = new Produto("Teclado", 850.00, 10);
-Produto produto2 = new Produto("Mouse", 120.00, 25);
+Celular celular = new Celular("Samsung", "Galaxy S24", 50);
 
-Console.WriteLine("\n" + produto1);
-Console.WriteLine(produto2);
+Console.WriteLine(celular);
 
-produto1.Preco = 900.00;
-produto2.Estoque = 30;
-
-Console.WriteLine("\nDepois das alterações:");
-Console.WriteLine(produto1);
-Console.WriteLine(produto2);
+celular.Ligar();
+celular.Carregar();
+celular.Desligar();
 
 
 ContaBancaria conta1 = new ContaBancaria("Carlos", 1001, 1500.00);
