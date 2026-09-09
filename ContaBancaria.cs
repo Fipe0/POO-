@@ -1,47 +1,75 @@
-public class ContaBancaria{
+public class Celular{
     
     
-    
-    private string titular;
-    private int numero;
-    private double saldo;
+    private string marca;
+    private string modelo;
+    private int bateria;
 
-    public string Titular    {
-        get { return titular; }
-        set        {
-            if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException("O titular não pode ser vazio.");
-
-            titular = value;
-        }
-    }
-
-    public int Numero    {
-        get { return numero; }
-        set        {
-            if (value <= 0)
-                throw new ArgumentException("O número da conta deve ser maior que zero.");
-            numero = value;
-        }
-    }
-
-    public double Saldo    {
-        get { return saldo; }
-        set        {
-            if (value < 0)
-                throw new ArgumentException("O saldo não pode ser negativo.");
-            saldo = value;
-        }
-    }
-    public ContaBancaria(string titular, int numero, double saldo)
+    public string Marca
     {
-        Titular = titular;
-        Numero = numero;
-        Saldo = saldo;
+        get { return marca; }
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("A marca não pode estar vazia.");
+
+            marca = value;
+        }
+    }
+
+    public string Modelo
+    {
+        get { return modelo; }
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("O modelo não pode estar vazio.");
+
+            modelo = value;
+        }
+    }
+
+    public int Bateria
+    {
+        get { return bateria; }
+        set
+        {
+            if (value < 0 || value > 100)
+                throw new ArgumentException("A bateria deve estar entre 0 e 100.");
+
+            bateria = value;
+        }
+    }
+
+    public Celular(string marca, string modelo, int bateria)
+    {
+        Marca = marca;
+        Modelo = modelo;
+        Bateria = bateria;
+    }
+
+    public void Ligar()
+    {
+        if (Bateria > 0)
+            Console.WriteLine($"{Marca} {Modelo} foi ligado.");
+        else
+            Console.WriteLine("Não é possível ligar. Bateria descarregada.");
+    }
+
+    public void Desligar()
+    {
+        Console.WriteLine($"{Marca} {Modelo} foi desligado.");
+    }
+
+    public void Carregar()
+    {
+        Bateria = 100;
+        Console.WriteLine($"{Marca} {Modelo} foi carregado. Bateria: {Bateria}%");
     }
 
     public override string ToString()
     {
-        return $"Titular: {Titular} | Conta: {Numero} | Saldo: R$ {Saldo:F2}";
+        return $"Celular: {Marca} | Modelo: {Modelo} | Bateria: {Bateria}%";
     }
 }
+``
