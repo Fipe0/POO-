@@ -64,7 +64,7 @@ public class Celular{
     public void Carregar()
     {
         Bateria = 100;
-        Console.WriteLine($"{Marca} {Modelo} foi carregado. Bateria: {Bateria}%");
+        Console.WriteLine($"O seu Celular já estar carregado | Bateria: {Bateria}%");
     }
 
     public override string ToString()
