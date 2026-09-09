@@ -1,4 +1,4 @@
-Animal cachorro = new Animal("Rex", 5, "Cachorro");
+Animal cachorro = new Animal("Martelo", 5, "Cachorro");
 
 cachorro.Comer();
 cachorro.Dormir();
