@@ -1,10 +1,11 @@
-Aluno aluno1 = new Aluno("Filipe", 15, 8.5);
-Aluno aluno2 = new Aluno("João", 16, 7.0);
-Console.WriteLine(aluno1);
-Console.WriteLine(aluno2);
-aluno1.Nota = 9.5;
-Console.WriteLine("\nDepois de alterar a nota:");
-Console.WriteLine(aluno1);
+Animal cachorro = new Animal("Rex", 5, "Cachorro");
+
+cachorro.Comer();
+cachorro.Dormir();
+cachorro.Som();
+
+
+Console.WriteLine(cachorro);
 
 
 
