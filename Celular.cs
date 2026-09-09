@@ -72,4 +72,3 @@ public class Celular{
         return $"Celular: {Marca} | Modelo: {Modelo} | Bateria: {Bateria}%";
     }
 }
-``
